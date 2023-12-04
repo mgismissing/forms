@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it" translate="no">
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
+		<script src="../../discord.js"></script>
+		<script src="../../main.js"></script>
+	</head>
+	<body>
+		<div class="form container">
+			<div class="form margin">
+				<h1>REGISTRO ATTIVITA' ACCADEMIA ARMA DEI CARABINIERI</h1>
+			</div>
+			<div class="form margin">
+				<p>
+					Nome<br>
+					<input type="text" class="user typeable" id="a" autocomplete="off"><br><br>
+					Grado<br>
+					<input type="text" class="user typeable" id="b" autocomplete="off"><br><br>
+					Tipologia di Attività<br>
+					<input type="text" class="user typeable" id="c" autocomplete="off"><br><br>
+					Nome dei partecipanti<br>
+					<input type="text" class="user typeable" id="d" autocomplete="off"><br><br>
+					Numero di partecipanti<br>
+					<input type="number" class="user typeable" id="e" autocomplete="off"><br><br>
+					Ora inizio Attività<br>
+					<input type="time" class="user typeable" id="f" autocomplete="off"><br><br>
+					Ora fine Attività<br>
+					<input type="time" class="user typeable" id="g" autocomplete="off">
+				</p>
+			</div>
+			<input type="button" class="user clickable" value="Invia Form" id="submit" onclick="submitDWH('https:\/\/discord.com/api/webhooks/1179452362872590427/D1gv5YGh0zGwO8l2klDva1OFmGcOcDKEJXnLrCkRMMmChZOHj5lRE4E1SH7rZEK06e9T', '**REGISTRO ATTIVITA\' UFFICIALI', 'Nome:\n' + document.getElementById('a').value + '\nGrado:\n' + document.getElementById('b').value + '\nTipologia di Attività:\n' + document.getElementById('c').value + '\nNome dei partecipanti:\n' + document.getElementById('d').value + '\nNumero di partecipanti:\n' + document.getElementById('e').value + '\nOra inizio Attività:\n' + document.getElementById('f').value + '\nOra fine Attività:\n' + document.getElementById('g').value, 0xFFFFFF)">
+			<p><a href="../../faq/where-does-my-data-go">Where does my data go?</a> | <a href="../../">More about Forms</a> | Powered by <a href="/empties">Empties</a></p>
+		</div>
+	</body>
+</html>
