@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script src="../discord.js"></script>
+	<script src="../main.js"></script>
+</head>
+<body>
+	<div class="form container">
+		<div class="form margin">
+			<h1>Form Template</h1>
+		</div>
+		<div class="form margin">
+			<p>
+				<a class="user clickable" href="https://mgismissing.github.io/z/p/cynvoid">Follow me</a> on zTube!<br><br>
+				Email<br>
+				<input type="email" class="user typeable" id="email" autocomplete="email"><br><br>
+				Name<br>
+				<input type="text" class="user typeable" id="name" autocomplete="name"><br><br>
+				Nickname<br>
+				<input type="text" class="user typeable" id="nickname" autocomplete="nickname">
+			</p>
+		</div>
+		<input type="button" class="user clickable" value="Send form to Discord Webhook" id="submit" onclick="submitDWH('https:\/\/discord.com/api/webhooks/1181255695975329842/FmcWWIJfB2SzhbY2Z6jleigOoGukjDt4ScfauN-jnTcVuDzpaMzOTnDDbOSo2f1GPccC', 'Info', 'Nome: ' + document.getElementById('name').value + '\nSoprannome: ' + document.getElementById('nickname').value + '\nEmail: ' + document.getElementById('email').value, 0xFF00FF)">
+		<p><a href="../faq/where-does-my-data-go">Where does my data go?</a> | <a href="../">More about Forms</a> | Powered by <a href="/">Empties</a></p>
+	</div>
+</body>
