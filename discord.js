@@ -3,9 +3,9 @@ function discordMessage(webhook, message) {
         content: message
     };
     fetch(webhook, {
-        method: 'POST',
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
     })
@@ -17,6 +17,7 @@ function discordMessage(webhook, message) {
     });
 };
 function discordEmbed(webhook, title, description, color) {
+    console.log(color)
 	const data = {
         embeds: [
             {
@@ -27,14 +28,14 @@ function discordEmbed(webhook, title, description, color) {
         ]
     };
     fetch(webhook, {
-        method: 'POST',
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
     })
     .then(response => {
-        console.log("DISCORD WEBHOOK", response.status, response.statusText)
+        console.log("DISCORD WEBHOOK", response.status, response.statusText);
     })
     .catch(error => {
         console.error("DISCORD WEBHOOK ERROR", error);

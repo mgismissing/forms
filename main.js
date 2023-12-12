@@ -1,7 +1,7 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 async function submitGET() {
 	document.getElementById("submit").disabled = true;
-	document.getElementById("submit").value = "Sending form...";
+	document.getElementById("submit").value = "Sending form via GET request...";
 	var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
         console.log(xmlHttp.status, xmlHttp.statusText);
@@ -22,15 +22,23 @@ async function submitGET() {
 		xmlHttp.open("GET", param1 + "?a=" + encodeURIComponent(document.getElementById("a").value) + "&b=" + encodeURIComponent(document.getElementById("b").value) + "&c=" + encodeURIComponent(document.getElementById("c").value), true);
 		xmlHttp.send(null);
 	} catch (error) {
-		document.getElementById("submit").value = "JavaScipt Error (Missing Element)";
+		document.getElementById("submit").value = "JavaScript Error (Missing Element)";
 	};
 	await delay(2000);
 	window.location.reload();
 };
-async function submitDWH(webhook, title, description, color) {
+async function submitDWHEmbed(webhook, title, description, color) {
 	document.getElementById("submit").disabled = true;
-	document.getElementById("submit").value = "Sending form via Discord Webhook...";
-	discordEmbed(webhook, title, description, color)
+	document.getElementById("submit").value = "Sending form via Discord WebHook...";
+	discordEmbed(webhook, title, description, color);
+	document.getElementById("submit").value = "Sent";
+	await delay(2000);
+	window.location.reload();
+};
+async function submitDWHMessage(webhook, message) {
+	document.getElementById("submit").disabled = true;
+	document.getElementById("submit").value = "Sending form via Discord WebHook...";
+	discordMessage(webhook, message);
 	document.getElementById("submit").value = "Sent";
 	await delay(2000);
 	window.location.reload();

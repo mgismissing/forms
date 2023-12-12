@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it" translate="no">
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/style.css">
+		<script src="/discord.js"></script>
+		<script src="/main.js"></script>
+		<script src="/utils.js"></script>
+	</head>
+	<body>
+		<div class="form container">
+			<div class="form margin">
+				<h1><mark>UTILS</mark> - Discord WebHook Embed</h1>
+			</div>
+			<div class="form margin">
+				<p>
+					Discord WebHook Link<br>
+					<input type="url" class="user typeable" id="a" autocomplete="off"><br><br>
+					Title<br>
+					<input type="text" class="user typeable" id="b" autocomplete="off"><br><br>
+					Description<br>
+					<input type="text" class="user typeable" id="c" autocomplete="off"><br><br>
+					Color<br>
+					<input type="color" class="user typeable" id="d" autocomplete="off">
+				</p>
+			</div>
+			<input type="button" class="user clickable" value="Invia Form" id="submit" onclick="submitDWHEmbed(document.getElementById('a').value, document.getElementById('b').value, document.getElementById('c').value, colorToHex(document.getElementById('d').value))">
+			<p><a href="/faq/where-does-my-data-go">Where does my data go?</a> | <a href="/">More about Forms</a> | Powered by <a href="http://www.empties.it/">Empties</a></p>
+		</div>
+	</body>
+</html>
