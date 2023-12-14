@@ -4,7 +4,7 @@ async function submitGET() {
 	document.getElementById("submit").value = "Sending form via GET request...";
 	var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
-        console.log(xmlHttp.status, xmlHttp.statusText);
+    console.log(xmlHttp.status, xmlHttp.statusText);
 		if (xmlHttp.status == 0) {
 			document.getElementById("submit").value = "Website Is Offline (" + xmlHttp.status + ")";
 		} else {
