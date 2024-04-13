@@ -24,22 +24,16 @@ async function submitGET() {
 	} catch (error) {
 		document.getElementById("submit").value = "JavaScript Error (Missing Element)";
 	};
-	await delay(2000);
-	window.location.reload();
 };
 async function submitDWHEmbed(webhook, title, description, color) {
 	document.getElementById("submit").disabled = true;
 	document.getElementById("submit").value = "Sending form via Discord WebHook...";
 	discordEmbed(webhook, title, description, color);
 	document.getElementById("submit").value = "Sent";
-	await delay(2000);
-	window.location.reload();
 };
 async function submitDWHMessage(webhook, message) {
 	document.getElementById("submit").disabled = true;
 	document.getElementById("submit").value = "Sending form via Discord WebHook...";
 	discordMessage(webhook, message);
 	document.getElementById("submit").value = "Sent";
-	await delay(2000);
-	window.location.reload();
 };

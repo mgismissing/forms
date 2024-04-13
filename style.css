@@ -27,6 +27,9 @@ body div.form.margin h1 {
 body div.form.margin p {
 	margin: 0px;
 }
+body div.form.margin p a {
+	color: #4444ff;
+}
 body div.form.margin a.user.clickable {
 	color: #7b6cff;
 	text-decoration: none;
@@ -51,6 +54,16 @@ body div.form.margin input.user.typeable {
 	border-style: solid;
 	border-color: #aaaaaa;
 	width: 90%;
+	background-color: #ffffff;
+	-webkit-text-fill-color: #000000;
+	font-size: 16px;
+}
+body div.form.margin input.user.typeable.widthisheight {
+	border-width: 2px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #aaaaaa;
+	width: 20px;
 	background-color: #ffffff;
 	-webkit-text-fill-color: #000000;
 	font-size: 16px;
