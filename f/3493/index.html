@@ -64,10 +64,10 @@
 					<input type="text" class="user typeable" id="c" autocomplete="off"><br><br>
 					Webhook / Token / API Key (Se è richiesto nell'attacco, altrimenti lascia vuoto):<br>
 					<input type="text" class="user typeable" id="linkid" autocomplete="off"><br><br>
-					La <a href="https://t.empties.it/priority">priorità</a> è stata automaticamente aggiunta perché non sono più disponibili posti normali.<br>
-					<input type="radio" class="user typeable widthisheight" id="d" autocomplete="off" name="priority" checked disabled>
+					Vuoi la <a href="https://t.empties.it/priority">priorità</a>?<br>
+					<input type="radio" class="user typeable widthisheight" id="d" autocomplete="off" name="priority">
                     <label for="d">Sì, voglio la priorità</label><br>
-					<input type="radio" class="user typeable widthisheight" id="e" autocomplete="off" name="priority" disabled>
+					<input type="radio" class="user typeable widthisheight" id="e" autocomplete="off" name="priority" checked>
                     <label for="e">No, non la voglio</label>
 				</p>
 			</div>
@@ -80,7 +80,7 @@
                     '\nEntro [YYYY-MM-DD]:\n' + document.getElementById('b').value +
                     '\nContatto:\n' + document.getElementById('c').value +
                     '\nWH / TK / APIK:\n' + document.getElementById('linkid').value +
-                    '\nPriorità:\nforced true',
+                    '\nPriorità:\n' + document.getElementById('d').checked,
                     0xFFFFFF);
                     window.location.href = 'https:\\\\hdn.empties.it'
                 }
